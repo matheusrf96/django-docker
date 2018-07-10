@@ -1,0 +1,5 @@
+===== Commandos =====
+
+docker-compose run web django-admin.py startproject composedjango .
+docker-compose run web ./manage.py createsuperuser
+docker-compose up
