@@ -1,7 +1,7 @@
 ===== Commandos =====
 
 docker-compose run web django-admin.py startproject composedjango .
-docker exec django_docker_web_1 ./manage.py makemigrations
-docker exec django_docker_web_1 ./manage.py migrate
-docker exec django_docker_web_1 ./manage.py createsuperuser
+docker exec django_docker_app_1 ./manage.py makemigrations
+docker exec django_docker_app_1 ./manage.py migrate
+docker exec django_docker_app_1 ./manage.py createsuperuser
 docker-compose up
