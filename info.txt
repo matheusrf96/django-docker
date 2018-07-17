@@ -5,3 +5,12 @@ docker exec django_docker_app_1 ./manage.py makemigrations
 docker exec django_docker_app_1 ./manage.py migrate
 docker exec django_docker_app_1 ./manage.py createsuperuser
 docker-compose up
+
+===== Erros =====
+
+django.db.utils.OperationalError: (2003, 'Can\'t connect to MySQL server on \'127.0.0.1\' (111 "Connection refused")') docker
+    - Mudar o host para 'db'(nome do container no docker-compose,yml) no settings.py
+
+django.db.utils.operationalError: (2059,“Authentication Plugin 'caching_sha2_password'”)
+    - "ALTER USER 'username'@'ip_address' IDENTIFIED WITH mysql_native_password BY 'password';" no banco
+    - docker-compose restart
