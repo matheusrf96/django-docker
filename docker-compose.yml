@@ -12,6 +12,8 @@ services:
       MYSQL_DATABASE: django
     networks: 
       - django-app
+    volumes:
+      - ./db_script/init.sql:/docker-entrypoint-initdb.d/init.sql
   app:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
